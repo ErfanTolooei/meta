@@ -1,13 +1,5 @@
 #!/bin/bash
 
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
-export PATH
-
-cd "$(
-  cd "$(dirname "$0")" || exit
-  pwd
-)" || exit
-
 Green="\033[32m"
 Red="\033[31m"
 
@@ -17,21 +9,6 @@ Font="\033[0m"
 
 OK="${Green}[OK]${Font}"
 Error="${Red}[WRONG]${Font}"
-
-shell_mode="ws"
-v2ray_conf_dir="/etc/v2ray"
-nginx_conf_dir="/etc/nginx/conf/conf.d"
-v2ray_conf="${v2ray_conf_dir}/config.json"
-nginx_conf="${nginx_conf_dir}/v2ray.conf"
-nginx_dir="/etc/nginx"
-nginx_openssl_src="/usr/local/src"
-v2ray_qr_config_file="/usr/local/vmess_qr.json"
-nginx_systemd_file="/etc/systemd/system/nginx.service"
-v2ray_systemd_file="/etc/systemd/system/v2ray.service"
-ssl_update_file="/usr/bin/ssl_update.sh"
-nginx_version="1.20.1"
-openssl_version="1.1.1k"
-jemalloc_version="5.2.1"
 
 random_num=$((RANDOM % 12 + 4))
 
