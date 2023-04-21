@@ -57,7 +57,9 @@ ngrok_install(){
   echo -e "Your Token : ${Token}"
   ./ngrok config add-authtoken ${Token}
     echo -e "Please copy Forwarding url"
-  ./ngrok tcp 4444
+    urlfwd = ./ngrok tcp 4444
+  var=${urlfwd}
+      echo -e var
 }
 
 metasploit_install(){
